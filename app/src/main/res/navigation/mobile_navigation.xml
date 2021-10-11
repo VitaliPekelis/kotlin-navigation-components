@@ -87,7 +87,6 @@
     </fragment>
 
 
-
     <fragment
         android:id="@+id/deeplink_dest"
         android:name="com.example.android.codelabs.navigation.DeepLinkFragment"
@@ -99,7 +98,7 @@
             android:defaultValue="Android!"/>
         <!-- TODO STEP 11.1 - Add a deep link to www.example.com/{myarg}/ -->
 
-        <!--<deepLink app:uri="www.example.com/{myarg}" />-->
+        <deepLink app:uri="www.example.com/{myarg}" />
 
         <!-- TODO END STEP 11.1 -->
     </fragment>
