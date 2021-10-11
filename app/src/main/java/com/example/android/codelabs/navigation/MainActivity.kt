@@ -26,8 +26,10 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.navigation.NavController
+import androidx.navigation.Navigation
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.navOptions
 import androidx.navigation.ui.*
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.navigation.NavigationView
@@ -119,6 +121,19 @@ class MainActivity : AppCompatActivity() {
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        if(item.itemId == R.id.new_activity) {
+            val options = navOptions {
+                anim {
+                    enter = R.anim.slide_in_from_bottom
+                    exit = R.anim.slide_out_to_up
+                    popEnter = R.anim.slide_in_from_bottom
+                    popExit = R.anim.slide_out_to_up
+                }
+            }
+            Navigation.findNavController(this, R.id.my_nav_host_fragment).navigate(R.id.new_activity, null, options)
+            return false
+        }
+
         //return super.onOptionsItemSelected(item)
         // TODO STEP 9.2 - Have Navigation UI Handle the item selection - make sure to delete
         //  the old return statement above

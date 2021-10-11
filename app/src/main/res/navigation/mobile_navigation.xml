@@ -104,5 +104,9 @@
     </fragment>
 
 
+    <activity
+        android:id="@+id/new_activity"
+        android:name="com.example.android.codelabs.navigation.NewActivity"
+        tools:layout="@layout/activity_new"/>
 
 </navigation>

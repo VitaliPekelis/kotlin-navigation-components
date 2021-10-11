@@ -39,6 +39,8 @@
 
         </activity>
 
+        <activity android:name=".NewActivity"/>
+
         <receiver android:name=".DeepLinkAppWidgetProvider">
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
